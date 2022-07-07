@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LogInScreen from './src/screens/LogInScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
+import WelcomeScreen from './src/screens/WelcomeScreen';
 
 import {lightGrey, darkGrey} from './Styles'
 
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={screenOptions}>
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Log In" component={LogInScreen} />
         <Stack.Screen name="Sign Up" component={SignUpScreen} />
       </Stack.Navigator>
@@ -31,15 +33,13 @@ const screenOptions =  {
       shadowOffset: {
         height: 0,
       },
-      marginTop: 15,
-      height: 60,
     },
     headerTintColor: lightGrey,
     headerTitleStyle: {
       alignSelf: 'center',
       textAlign: 'center',
       fontWeight: 'bold',
-      fontSize: 40,
+      fontSize: 38,
       color: darkGrey,
     },
 }

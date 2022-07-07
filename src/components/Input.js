@@ -30,14 +30,14 @@ const styles = {
     height: 40,
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'start',
     paddingBottom: 10
   },
-  labelStyle: {
-    fontSize: 18,
-    flex: 1,
-    color: orange,
-    fontWeight: 'bold'
+  containerStyle: {
+    flexDirection: 'row',
+    alignItems: 'start',
+    paddingLeft: 20,
+    paddingRight: 20
   },
   inputStyle: {
     color: '#000',
@@ -47,12 +47,11 @@ const styles = {
     lineHeight: 23,
     flex: 2
   },
-  containerStyle: {
+  labelStyle: {
+    fontSize: 18,
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: 20,
-    paddingRight: 20
+    color: orange,
+    fontWeight: 'bold'
   }
 };
 

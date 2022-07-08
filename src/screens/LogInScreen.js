@@ -7,7 +7,7 @@ import { lightGrey, orange, grey, lightPurp } from '../../Styles'
 const LogInScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { textInput, login, loginSection, labelStyle, footer, errorView, forgot, link, lightLink } = styles;
+  const { textInput, login, loginSection, labelStyle, footer, errorView, foot, forgot, link, lightLink } = styles;
 
   return (
     <KeyboardAvoidingView behavior="padding" style={login}>
@@ -50,7 +50,7 @@ const LogInScreen = ({ navigation }) => {
       </View>
 
       <View style={footer}>
-          <Text style={{ color: grey }}>Don't have an account? </Text>
+          <Text style={foot}>Don't have an account? </Text>
           <Text style={link} onPress={() => navigation.navigate('Sign Up')}>Sign Up</Text>
       </View>
     </KeyboardAvoidingView>
@@ -63,6 +63,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'center',
+  },
+  foot: {
+    color: grey
   },
   footer: {
     justifyContent: 'center',

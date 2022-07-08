@@ -3,11 +3,12 @@ import { Text, StyleSheet, View, TextInput, KeyboardAvoidingView } from 'react-n
 import { grey, lightPurp } from '../../Styles';
 
 const WelcomeScreen = ({ navigation }) => {
-    const { welcomeSection, welcome, prompt, or } = styles;
+    const { welcomeSection, welcome, prompt, or, intro } = styles;
 
   return (
     <KeyboardAvoidingView behavior="padding" style={welcome}>
       <View style={welcomeSection}>
+        <Text style={intro}>Moodie to track your mood, mental health and build healthy relationships</Text>
       </View>
 
       <View style={welcomeSection}>
@@ -34,6 +35,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     padding: 20,
     paddingTop: 60,
+  },
+  intro: {
+    fontSize: 18,
   },
   prompt: {
     color: lightPurp,

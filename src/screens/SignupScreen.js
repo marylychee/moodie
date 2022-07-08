@@ -8,7 +8,7 @@ const SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-    const { textInputStyle, signup, signupSection, labelStyle, footer } = styles;
+    const { textInputStyle, signup, signupSection, labelStyle, footer, foot, link } = styles;
 
   return (
     <KeyboardAvoidingView behavior="padding" style={signup}>
@@ -47,8 +47,8 @@ const SignUpScreen = ({ navigation }) => {
       </View>
 
       <View style={footer}>
-          <Text style={{ color: grey }}> Already have an account? </Text>
-          <Text style={{ color: lightPurp }} onPress={() => navigation.navigate('Log In')}>Log In here</Text>
+          <Text style={foot}> Already have an account? </Text>
+          <Text style={link} onPress={() => navigation.navigate('Log In')}>Log In</Text>
       </View>
 
     </KeyboardAvoidingView>
@@ -63,6 +63,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
+  foot: {
+    color: grey,
+  },
   footer: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -74,6 +77,10 @@ const styles = StyleSheet.create({
     flex: 1,
     color: orange,
     fontWeight: 'bold'
+  },
+  link: {
+    color: lightPurp,
+    fontWeight: "bold",
   },
   signup: {
     flex: 1,

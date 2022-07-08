@@ -42,4 +42,5 @@ const screenOptions =  {
       fontSize: 38,
       color: darkGrey,
     },
+    headerBackTitle: '',
 }
